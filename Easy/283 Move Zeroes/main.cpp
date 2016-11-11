@@ -5,13 +5,20 @@ using namespace std;
 class Solution {
 public:
   void moveZeroes(vector<int>& nums) {
-    /**for(auto it = nums.cbegin(); it != nums.cend(); it++) {
-      if (*it == 0) {
-        nums.erase(it);
-        nums.push_back(0);
-        it--;
+    class Solution {
+    public:
+      void moveZeroes(vector<int>& nums) {
+        for(auto it = 0; it < nums.size();) {
+          if (nums[it] == 0) {
+            nums.erase(nums.begin() + it);
+            nums.push_back(0);
+          } else {
+            it++;
+          }
+          cout << it << endl;
+        }
       }
-    }*/
+    };
 
     /**
      * for (int i = 0, j = 0; i < nums.size(); ++i) {
